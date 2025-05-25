@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript数组对象应用案例</title>
+<script>
+<!--
+function Book(title,auth,publisher)
+{                                   //对象，属性列表，方法
+    this.Title=title
+    this.Auth=auth
+    this.Publisher=publisher
+    this.UpInfo=upBookInfo
+}    
+
+function upBookInfo(titleInfo)
+{
+    document.BookForm.BookTitle.value=titleInfo
+    document.BookForm.BookAuth.value=this.Auth
+    document.BookForm.BookPublisher.value=this.Publisher
+}
+-->
+
+
+</script>
+</head>
+<body>
+<script>
+var Books=new Array()
+Books[0] = new Book("算法与数据结构","严蔚敏 陈文博","清华大学")
+Books[1] = new Book("英华大字典","郑易立","商务印书馆")
+Books[2] = new Book("XML/JSP网页编程教材","吴艾","北京希望电报")
+</script>
+<font color="blue" size=5 face="隶书">
+    点击按钮查阅详细信息
+    <form name="BookForm">
+    <input type="button" value="算法与数据结构" onclick="Books[0].UpInfo('算法与数据结构')"><br/>
+    <input type="button" value="英华大字典" onclick="Books[1].UpInfo('英华大字典')"><br/>
+    <input type="button" value="XML/JSP网页编程教材" onclick="Books[2].UpInfo('XML/JSP网页编程教材')"><br/>
+书名：<input type="text" name="BookTitle"><br/>
+作者：<input type="text" name="BookAuth"><br/>
+出版社：<input type="text" name="BookPublisher"><br/>
+    </form>
+</font>
+</body>
+</html>
